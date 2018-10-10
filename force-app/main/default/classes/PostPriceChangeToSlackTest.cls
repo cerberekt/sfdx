@@ -1,6 +1,5 @@
 @isTest
 public class PostPriceChangeToSlackTest {
-    
     static testMethod void testPost() {
         Boolean success = false;
         try {

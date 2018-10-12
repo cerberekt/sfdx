@@ -1,8 +1,7 @@
 @isTest
 public class PostPriceChangeToSlackTest {
-    
     static testMethod void testPost() {
-        Boolean success = true;
+        Boolean success = false;
         try {
             Property__c p = new Property__c(Name='test property', Price__c=200000);
             insert p;

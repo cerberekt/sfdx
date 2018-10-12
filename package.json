@@ -1,0 +1,28 @@
+{
+  "name": "sfdx-dreamhouse",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "cz-jira-smart-commit": "^3.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cerberekt/sfdx.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cerberekt/sfdx/issues"
+  },
+  "homepage": "https://github.com/cerberekt/sfdx#readme",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-jira-smart-commit"
+    }
+  }
+}

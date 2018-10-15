@@ -1,6 +1,7 @@
 # DreamHouse Sample Application  
 ### Adding Another Description\
 ### Dummy comment for TCS-6
+### Some other documentation around TCS-7
 
 [![Build Status](https://dev.azure.com/PhoenixSandbox/sfdx/_apis/build/status/cerberekt.sfdx)](https://dev.azure.com/PhoenixSandbox/sfdx/_build/latest?definitionId=1)
 

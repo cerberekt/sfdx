@@ -12,8 +12,8 @@ node {
     def CONNECTED_APP_CONSUMER_KEY=env.CONNECTED_APP_CONSUMER_KEY_DH
 
     def nodeHome = tool 'NodeJS'
-    sh "${nodeHome}/bin/node -v"
-    sh "${nodeHome}/bin/node -v"
+    env.PATH = "${nodeHome}/bin:${env.PATH}"
+    sh 'npm -v'
     
     stage('checkout source') {
         // when running in multi-branch job, one must issue this command

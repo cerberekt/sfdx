@@ -10,16 +10,13 @@ node {
     def SFDC_HOST = env.SFDC_HOST_DH
     def JWT_KEY_CRED_ID = env.JWT_CRED_ID_DH
     def CONNECTED_APP_CONSUMER_KEY=env.CONNECTED_APP_CONSUMER_KEY_DH
-
+    def sfdx = tool 'sfdx'
+    
     stage('checkout source') {
         // when running in multi-branch job, one must issue this command
         checkout scm
-        
-        sh '''
-            mkdir sfdx
-            wget -qO- https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz | tar xJ -C sfdx --strip-components 1
-            ./sfdx/install
-        '''
+       
+        sh 'echo ${sfdx}'
         
         rc = sh returnStatus: true, script: "sfdx --version"
         if (rc != 0) { error 'SFDX install failed' }

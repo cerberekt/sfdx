@@ -1,7 +1,7 @@
 #!groovy
 import groovy.json.JsonSlurperClassic
 node {
-
+    
     def BUILD_NUMBER=env.BUILD_NUMBER
     def RUN_ARTIFACT_DIR="tests/${BUILD_NUMBER}"
     def SFDC_USERNAME
@@ -11,18 +11,15 @@ node {
     def JWT_KEY_CRED_ID = env.JWT_CRED_ID_DH
     def CONNECTED_APP_CONSUMER_KEY=env.CONNECTED_APP_CONSUMER_KEY_DH
 
-
-    env.NODEJS_HOME = "${tool 'NodeJS'}"
-   
+    docker.image('node:7-alpine').inside{
     
-    // on linux / mac
-    env.PATH="${env.NODEJS_HOME}/bin:${env.PATH}"
-    sh 'npm --version'
-    
-    stage('checkout source') {
+        stage('checkout source') {
         // when running in multi-branch job, one must issue this command
         checkout scm
-    }
+        sh 'node --version'
+        sh 'npm --version'
+        sh 'npm install sfdx-cli'    
+        }
     
 
     withCredentials([file(credentialsId: JWT_KEY_CRED_ID, variable: 'jwt_key_file')]) {
@@ -69,3 +66,9 @@ node {
         }
     }
 }
+   
+} 
+
+    
+    
+    

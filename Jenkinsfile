@@ -10,20 +10,16 @@ node {
     def SFDC_HOST = env.SFDC_HOST_DH
     def JWT_KEY_CRED_ID = env.JWT_CRED_ID_DH
     def CONNECTED_APP_CONSUMER_KEY=env.CONNECTED_APP_CONSUMER_KEY_DH
-    def sfdx = tool 'sfdx'
+
+    def nodeHome = tool 'NodeJS'
+    sh "${nodeHome}/bin/node -v"
+    sh "${nodeHome}/bin/node -v"
     
     stage('checkout source') {
         // when running in multi-branch job, one must issue this command
         checkout scm
-       
-        sh 'echo ${sfdx}'
-        
-        rc = sh returnStatus: true, script: "sfdx --version"
-        if (rc != 0) { error 'SFDX install failed' }
-
     }
     
-    stage()
 
     withCredentials([file(credentialsId: JWT_KEY_CRED_ID, variable: 'jwt_key_file')]) {
         stage('Create Scratch Org') {

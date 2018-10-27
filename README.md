@@ -1,6 +1,6 @@
 # DreamHouse Sample Application
 
-[![Build Status](https://dev.azure.com/PhoenixSandbox/sfdx/_apis/build/status/cerberekt.sfdx)](https://dev.azure.com/PhoenixSandbox/sfdx/_build/latest?definitionId=1)
+[![Build Status](https://dev.azure.com/PhoenixSandbox/sfdx/_apis/build/status/SFDX-Scratch-Org-CI)](https://dev.azure.com/PhoenixSandbox/sfdx/_build/latest?definitionId=7)
 
 DreamHouse is a sample application that demonstrates the unique value proposition of the Salesforce App Cloud for building Employee Productivity and Customer Engagement apps.
 

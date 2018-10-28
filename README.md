@@ -2,6 +2,9 @@
 
 [![Build Status](https://dev.azure.com/PhoenixSandbox/sfdx/_apis/build/status/SFDX-Scratch-Org-CI)](https://dev.azure.com/PhoenixSandbox/sfdx/_build/latest?definitionId=7)
 
+[WIP-MultiStage Release](https://dev.azure.com/PhoenixSandbox/sfdx/_releaseProgress?_a=release-pipeline-progress&releaseId=22&view=mine)
+
+
 DreamHouse is a sample application that demonstrates the unique value proposition of the Salesforce App Cloud for building Employee Productivity and Customer Engagement apps.
 
 Check out the [DreamHouse microsite](http://www.dreamhouseapp.io/) for more information.

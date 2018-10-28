@@ -1,5 +1,5 @@
 {
-    "orgName": "Salesforce DX Company",
+    "orgName": "DD-ORG",
     "edition": "Developer",
     "orgPreferences" : {
         "enabled": ["S1DesktopEnabled"]
